@@ -13,24 +13,17 @@ function findMinAndRemove(firstHalf, secondHalf){
 }
  
 function merge(first, second) {
-  // MY SOLUTION
-  let sorted = []
 
-  while (first.length || second.length) {
-    first[0] < second[0] ? sorted.push(first.shift()) : sorted.push(second.shift())
-  }
-
-  return sorted
 
   // FLATIRON'S SOLUTION
-  // let sorted = []
-  // let currentMin;
-  // while(first.length != 0 && second.length != 0){
-  //   currentMin = findMinAndRemove(first, second)
-  //   sorted.push(currentMin)
-  // }
+  let sorted = []
+  let currentMin;
+  while(first.length != 0 && second.length != 0){
+    currentMin = findMinAndRemove(first, second)
+    sorted.push(currentMin)
+  }
 
-  // return sorted.concat(first).concat(second)
+  return sorted.concat(first).concat(second)
 }
 
 
