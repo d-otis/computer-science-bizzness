@@ -13,6 +13,7 @@ function findMinAndRemove(firstHalf, secondHalf){
 }
  
 function merge(first, second) {
+  // MY SOLUTION
   let sorted = []
 
   while (first.length || second.length) {
@@ -20,7 +21,18 @@ function merge(first, second) {
   }
 
   return sorted
+
+  // FLATIRON'S SOLUTION
+  // let sorted = []
+  // let currentMin;
+  // while(first.length != 0 && second.length != 0){
+  //   currentMin = findMinAndRemove(first, second)
+  //   sorted.push(currentMin)
+  // }
+
+  // return sorted.concat(first).concat(second)
 }
+
 
 
 merge(costOfItemsAtTraderJoes, costOfItemsAtWholeFoods)
