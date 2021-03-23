@@ -27,5 +27,20 @@ function merge(first, second) {
 }
 
 
+function mergeSort(array) {
+  let midpoint = array.length / 2
+  let firstHalf = array.slice(0, midpoint)
+  let secondHalf = array.slice(midpoint, array.length)
 
-merge(costOfItemsAtTraderJoes, costOfItemsAtWholeFoods)
+
+  if (array.length < 2) {
+    return array
+  } else {
+    return merge(mergeSort(firstHalf), mergeSort(secondHalf))
+  } 
+}
+
+// mergeSort([2, 1])
+console.log(mergeSort([7, 8, 1, 6]))
+
+// https://github.com/learn-co-curriculum/merge-sort-codealong
