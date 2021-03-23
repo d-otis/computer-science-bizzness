@@ -27,3 +27,8 @@ function selectionSort(array) {
 }
 
 selectionSort([ 5, 6, -1, 1, 3 ])
+
+export {
+  minAndRemove,
+  selectionSort
+}
