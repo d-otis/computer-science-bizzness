@@ -6,8 +6,8 @@ let costOfItemsAtWholeFoods =  [3, 4, 5, 9, 10]
 function merge(first, second) {
   let sorted = []
 
-  for (let i = 0; i < first.length; i++) {
-    first[i] < second[i] ? sorted.push(first[i], second[i]) : sorted.push(second[i], first[i])
+  while (first.length || second.length) {
+    first[0] < second[0] ? sorted.push(first.shift()) : sorted.push(second.shift())
   }
 
   return sorted
