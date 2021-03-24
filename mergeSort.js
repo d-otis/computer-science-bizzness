@@ -26,6 +26,7 @@ function merge(first, second) {
   return sorted.concat(first).concat(second)
 }
 
+// merge(costOfItemsAtTraderJoes, costOfItemsAtWholeFoods)
 
 function mergeSort(array) {
   let midpoint = array.length / 2
